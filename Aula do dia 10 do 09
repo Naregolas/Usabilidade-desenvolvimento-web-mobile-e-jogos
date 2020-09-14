@@ -1,0 +1,226 @@
+Exercício 1:
+
+import 'package:flutter/material.dart';
+
+final Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: darkBlue),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: MyWidget(),
+        ),
+      ),
+    );
+  }
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text('Almir Dobrador de Carvão', style: Theme.of(context).textTheme.headline4);
+  }
+}
+
+____________________________________________________________________________________________
+
+Exercício 2:
+
+import 'package:flutter/material.dart';
+
+void main() {
+  String nome = "Almir";
+  
+  runApp(
+    Center(
+      child: RichText(
+        textDirection: TextDirection.ltr,
+        text: TextSpan(
+          text: "Olá, ",
+          style: TextStyle(
+            color: Colors.green,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            backgroundColor: Colors.white,
+           ), //TextStyle.
+          children: <TextSpan>[
+            TextSpan(
+              text: '$nome',
+              style: TextStyle(
+                color: Colors.blue,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.red,
+                decorationStyle: TextDecorationStyle.double,
+                ),
+              ),
+            TextSpan(
+              text: '! \n Hoje é Quinta Feira!',
+              ),
+            TextSpan(
+              text: '! \n Bom dia!',
+              ),
+            ],
+          ),
+        textAlign: TextAlign.center,
+         ),
+       ),
+     );
+   }
+   
+____________________________________________________________________________________________
+
+Exercício 3:
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(Row(
+        textDirection: TextDirection.ltr,
+         children: <Widget>[
+            Expanded(
+              child: FittedBox(
+                fit: BoxFit.contain,
+                child: const FlutterLogo(),
+              ),
+             ),
+               Expanded(
+             child: FittedBox(
+             fit: BoxFit.contain,
+             child: Image.network(
+               'https://github.com/flutter/plugins/raw/master/packages/video_player/video_player/doc/demo_ipod.gif?raw=true',
+             ),
+           ),
+         ),
+             Expanded(
+             child: FittedBox(
+             fit: BoxFit.contain,
+             child: Image.network(
+               'https://picsum.photos/250?image=9',
+             ),
+           ),
+         ),
+            Expanded(
+              child: Text(
+           "Olá mundo. Este é o meu primeiro aplicativo usando o Widget Row. O Widget Row dispõe em linha.",
+               textDirection: TextDirection.ltr,
+               textAlign: TextAlign.center,
+               style: TextStyle(
+                color: Colors.green,
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+                backgroundColor: Colors.white,
+          ), //TextStyle.
+        ),
+      ),
+    ],
+  ));
+ }
+ 
+____________________________________________________________________________________________
+
+Exercício Resolvido pelo Professor:
+
+import 'package:flutter/material.dart';
+
+void main() {
+  String nome = "Ana", dia = "quinta-feira";
+
+  runApp(
+    Center(
+      child: RichText(
+        textDirection: TextDirection.ltr,
+        text: TextSpan(
+          text: "Olá, ",
+          style: TextStyle(
+            color: Colors.green,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            backgroundColor: Colors.white,
+          ), //TextStyle.
+          children: <TextSpan>[
+            TextSpan(
+              text: '$nome',
+              style: TextStyle(
+                color: Colors.blue,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.red,
+                decorationStyle: TextDecorationStyle.dotted,
+                backgroundColor: Colors.lightGreen,
+              ),
+            ),
+            TextSpan(
+              text: '!',
+            ),
+            TextSpan(
+              text: '\nHoje é $dia!',
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                backgroundColor: Colors.yellow,
+              ), //TextStyle.
+            ),
+            TextSpan(
+              text: '\nBom dia!',
+            ),
+            TextSpan(
+              text:
+                  '\n\nHoje, você terá que escrever um aplicativo em Flutter. O aplicativo deve imprimir um texto na tela. O texto possui trechos com estilos diferentes.',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+                backgroundColor: Colors.black,
+              ), //TextStyle.
+            ),
+            TextSpan(
+              text: '\n\n\nBoa prática!',
+              style: TextStyle(
+                color: Colors.purpleAccent,
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+                backgroundColor: Colors.black,
+              ), //TextStyle.
+            ),
+            TextSpan(
+              text: '\n=',
+              style: TextStyle(
+                color: Colors.lightGreen,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                backgroundColor: Colors.black,
+              ), //TextStyle.
+            ),
+            TextSpan(
+              text: 'D',
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                backgroundColor: Colors.black,
+              ), //TextStyle.
+            ),
+            TextSpan(
+              text: 'H',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                backgroundColor: Colors.black,
+              ), //TextStyle.
+            ),
+          ],
+        ),
+        textAlign: TextAlign.center,
+      ),
+    ),
+  );
+}
