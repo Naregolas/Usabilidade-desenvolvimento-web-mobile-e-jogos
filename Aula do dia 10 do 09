@@ -1,4 +1,4 @@
-Exercício 1:
+Exercício 2:
 
 import 'package:flutter/material.dart';
 
@@ -32,7 +32,7 @@ class MyWidget extends StatelessWidget {
 
 ____________________________________________________________________________________________
 
-Exercício 2:
+Exercício 3:
 
 import 'package:flutter/material.dart';
 
@@ -77,7 +77,7 @@ void main() {
    
 ____________________________________________________________________________________________
 
-Exercício 3:
+Exercício 4:
 
 import 'package:flutter/material.dart';
 
@@ -123,7 +123,97 @@ void main() {
     ],
   ));
  }
- 
+
+____________________________________________________________________________________________
+
+Exercício 5:
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(new MyApp());
+}
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Generated App',
+      theme: new ThemeData(
+        brightness:Brightness.dark,
+        primarySwatch: Colors.blue,
+        primaryColor: const Color(0xFF212121),
+        accentColor: const Color(0xFF64ffda),
+        canvasColor: const Color(0xFF303030),
+      ),
+      home: new MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key}) : super(key: key);
+  @override
+  _MyHomePageState createState() => new _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+    @override
+    Widget build(BuildContext context) {
+      return new Scaffold(
+        body:
+          new Padding(
+            child:
+              new Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  new FlutterLogo(
+                    size: 225.0,
+                  ),
+    
+                  new Image.network(
+                    'https://i.picsum.photos/id/9/250/250.jpg?hmac=tqDH5wEWHDN76mBIWEPzg1in6egMl49qZeguSaH9_VI',
+                    fit:BoxFit.fill,
+                    width: 170.0,
+                    height: 170.0,
+                    ),
+    
+                  new Text(
+                  "Google Flutter",
+                    style: new TextStyle(fontSize:12.0,
+                    color: const Color(0xFF116bf4),
+                    fontWeight: FontWeight.w200,
+                    fontFamily: "Roboto"),
+                  )
+                ]
+    
+              ),
+    
+            padding: const EdgeInsets.fromLTRB(50.0, 0.0, 50.0, 50.0),
+          ),
+    
+      );
+    }
+}
+
+____________________________________________________________________________________________
+
+Exercício 7:
+
+import 'package:flutter/material.dart';
+void main() {
+ runApp(Center(
+ child: Container(
+ decoration: BoxDecoration(
+ shape: BoxShape.circle,
+ color: Colors.yellow,
+ ),
+ padding: EdgeInsets.all(200),
+ margin: const EdgeInsets.all(200),
+ ),
+ ));
+}
 ____________________________________________________________________________________________
 
 Exercício Resolvido pelo Professor:
