@@ -209,14 +209,16 @@ void main() {
   decoration: BoxDecoration(
   shape: BoxShape.circle,
   color: Colors.yellow,
+  image: DecorationImage(
+      image: NetworkImage(
+        "https://images.unsplash.com/photo-1547721064-da6cfb341d50",
+      ), fit: BoxFit.scaleDown)
  ),
   padding: EdgeInsets.all(200),
-  margin: const EdgeInsets.all(200),
+  margin: const EdgeInsets.all(150),
  ),
- ));
-Widget build(BuildContext context) {
-  return Image(image: AssetImage('https://images.unsplash.com/photo-1547721064-da6cfb341d50'));
-}
+ )
+ );
 }
 ____________________________________________________________________________________________
 
