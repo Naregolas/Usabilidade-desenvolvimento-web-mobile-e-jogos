@@ -20,44 +20,49 @@ Exercício 3:
 import 'package:flutter/material.dart';
 
 void main() {
-  String nome = "Almir";
-  
+  String nome = 'Almir';
+  String diaS = 'Sábado';
+
   runApp(
     Center(
       child: RichText(
         textDirection: TextDirection.ltr,
         text: TextSpan(
-          text: "Olá, ",
+          text: 'Olá, ',
           style: TextStyle(
             color: Colors.green,
             fontSize: 30,
-            fontWeight: FontWeight.bold,
             backgroundColor: Colors.white,
-           ), //TextStyle.
+          ),
           children: <TextSpan>[
             TextSpan(
-              text: '$nome',
+              text: '$nome !',
               style: TextStyle(
                 color: Colors.blue,
                 decoration: TextDecoration.underline,
                 decorationColor: Colors.red,
                 decorationStyle: TextDecorationStyle.double,
-                ),
               ),
+            ),
             TextSpan(
-              text: '! \n Hoje é Quinta Feira!',
+              text: '\nHoje é $diaS !',
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 30,
+                backgroundColor: Colors.yellow,
               ),
+            ),
             TextSpan(
-              text: '! \n Bom dia!',
-              ),
-            ],
-          ),
+              text: '\nBom dia!',
+            ), // Text Style.
+          ],
+        ),
         textAlign: TextAlign.center,
-         ),
-       ),
-     );
-   }
-   
+      ), //Text.
+    ), //Center.
+  );
+}
+
 ____________________________________________________________________________________________
 
 Exercício 4:
