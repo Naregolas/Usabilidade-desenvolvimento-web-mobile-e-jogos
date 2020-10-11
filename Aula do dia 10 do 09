@@ -570,7 +570,7 @@ class HomeState extends State<Home> {
     double num01 = double.tryParse(this.num01Controller.text);
     double num02 = double.tryParse(this.num02Controller.text);
     double imc = num01 / (num02 * num02);
-    this.respimc = '$imc';
+    this.respimc = 'Seu IMC é: $imc';
     return this.respimc;
   }
 
@@ -666,7 +666,7 @@ class HomeState extends State<Home> {
     double num02 = double.tryParse(this.num02Controller.text);
     double num03 = double.tryParse(this.num03Controller.text);
     double volume = num01 * num02 * num03;
-    this.respvolume = '$volume';
+    this.respvolume = 'O volume deste sólido é de: $volume';
     return this.respvolume;
   }
 
