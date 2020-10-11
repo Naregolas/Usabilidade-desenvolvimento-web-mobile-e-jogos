@@ -745,3 +745,79 @@ class HomeState extends State<Home> {
     );
   }
 }
+
+____________________________________________________________________________________________
+
+Exercício 11:
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+      MaterialApp(
+        home: Home(),
+      ),
+    );
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Álbum"),
+        backgroundColor: Colors.green,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.network(
+                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.network(
+                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.network(
+                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.network(
+                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.network(
+                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.network(
+                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.network(
+                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.network(
+                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.network(
+                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
