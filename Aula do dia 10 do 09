@@ -175,15 +175,20 @@ void main() {
             ),
           ),
           child: FittedBox(
-            fit: BoxFit.none,
-            child: Image.network(
-                'https://github.com/flutter/plugins/raw/master/packages/video_player/video_player/doc/demo_ipod.gif?raw=true'),
+            fit: BoxFit.contain,
+            child: Container(
+              width: 250,
+              height: 250,
+              child: Image.network(
+                  'https://github.com/flutter/plugins/raw/master/packages/video_player/video_player/doc/demo_ipod.gif?raw=true'),
+            ),
           ),
-        ),
+        )
       ],
     ),
   )));
 }
+
 
 ____________________________________________________________________________________________
 
