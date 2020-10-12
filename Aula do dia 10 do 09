@@ -754,16 +754,16 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
       MaterialApp(
-        home: Home(),
+        home: PrimeiraRota(),
       ),
     );
 
-class Home extends StatelessWidget {
+class PrimeiraRota extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Álbum"),
+        title: Text('Album'),
         backgroundColor: Colors.green,
       ),
       body: Padding(
@@ -771,49 +771,64 @@ class Home extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             Padding(
+              // NOVA YORK
               padding: const EdgeInsets.all(8.0),
+            ),
+            FlatButton(
               child: Image.network(
-                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                'https://images.pexels.com/photos/213781/pexels-photo-213781.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NewYork()),
+                );
+              },
             ),
             Padding(
+              // PRAIA PEDRAS
               padding: const EdgeInsets.all(8.0),
+            ),
+            FlatButton(
               child: Image.network(
-                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                'https://images.pexels.com/photos/213782/pexels-photo-213782.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PraiaPedras()),
+                );
+              },
             ),
             Padding(
+              // PRAIA NEVOAAA
               padding: const EdgeInsets.all(8.0),
+            ),
+            FlatButton(
               child: Image.network(
-                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                'https://images.pexels.com/photos/213783/pexels-photo-213783.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PraiaNevoa()),
+                );
+              },
             ),
             Padding(
+              // DESERTO
               padding: const EdgeInsets.all(8.0),
-              child: Image.network(
-                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            FlatButton(
               child: Image.network(
-                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.network(
-                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.network(
-                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.network(
-                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.network(
-                  "https://i.ibb.co/G9tWjnd/Exec7.gif?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                'https://images.pexels.com/photos/213784/pexels-photo-213784.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Deserto()),
+                );
+              },
             ),
           ],
         ),
@@ -821,3 +836,193 @@ class Home extends StatelessWidget {
     );
   }
 }
+
+class NewYork extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("New York"),
+        backgroundColor: Colors.green,
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+              child: Text(
+                'New York',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            Container(
+              child: Text(
+                'Non pellentesque a ipsum fusce nec primis massa venenatis nunc tristique, quisque morbi mollis quis dapibus vitae iaculis potenti habitant facilisis, orci sit ornare rutrum morbi ornare suscipit nibh a. torquent felis a ad ligula varius id mi nostra.',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Voltar para o Álbum'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PraiaPedras extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Praia Solari"),
+        backgroundColor: Colors.green,
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+              child: Text(
+                'Praia Solari',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            Container(
+              child: Text(
+                'Non pellentesque a ipsum fusce nec primis massa venenatis nunc tristique, quisque morbi mollis quis dapibus vitae iaculis potenti habitant facilisis, orci sit ornare rutrum morbi ornare suscipit nibh a. torquent felis a ad ligula varius id mi nostra.',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Voltar para o Álbum'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PraiaNevoa extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Praia Albert Signum"),
+        backgroundColor: Colors.green,
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+              child: Text(
+                'Praia Albert Signum',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            Container(
+              child: Text(
+                'Non pellentesque a ipsum fusce nec primis massa venenatis nunc tristique, quisque morbi mollis quis dapibus vitae iaculis potenti habitant facilisis, orci sit ornare rutrum morbi ornare suscipit nibh a. torquent felis a ad ligula varius id mi nostra.',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Voltar para o Álbum'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Deserto extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Deserto"),
+        backgroundColor: Colors.green,
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+              child: Text(
+                'Deserto',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            Container(
+              child: Text(
+                'Non pellentesque a ipsum fusce nec primis massa venenatis nunc tristique, quisque morbi mollis quis dapibus vitae iaculis potenti habitant facilisis, orci sit ornare rutrum morbi ornare suscipit nibh a. torquent felis a ad ligula varius id mi nostra.',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Voltar para o Álbum'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+____________________________________________________________________________________________
+
+Exercício 12:
+
