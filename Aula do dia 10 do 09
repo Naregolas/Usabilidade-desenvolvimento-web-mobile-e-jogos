@@ -1802,11 +1802,19 @@ class HomeState extends State<Home> {
   TextEditingController num02Controller = TextEditingController();
   TextEditingController num03Controller = TextEditingController();
   String respcomb = "";
+  bool gasolina = true;
+  
   combu() {
     double num01 = double.tryParse(this.num01Controller.text);
     double num02 = double.tryParse(this.num02Controller.text);
-    double num03 = double.tryParse(this.num03Controller.text);
     double combu = num01 / num02;
+       
+    if (combu > 0.7 ){
+      this.gasolina = true;
+    }
+    else {
+      this.gasolina = false;
+    }
     this.respcomb = '$combu';
     return this.respcomb;
   }
@@ -1869,7 +1877,7 @@ class HomeState extends State<Home> {
           ),
           Column(
             children: [
-              if (combu == 0.7) ...[
+              if (this.gasolina == true) ...[
                 Text(
                   "O melhor combustível é Gasolina!",
                   style: TextStyle(
